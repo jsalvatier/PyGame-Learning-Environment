@@ -1,2 +1,2 @@
 from .pygamewrapper import PyGameWrapper
-from .doomwrapper import DoomWrapper
+#from .doomwrapper import DoomWrapper

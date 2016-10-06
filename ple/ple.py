@@ -124,8 +124,8 @@ class PLE(object):
             pygame.display.set_mode((1, 1), pygame.NOFRAME)
         
         #vizdoom needs an int
-        if isinstance(self.game, base.DoomWrapper):
-            self.rng = rng
+        #if isinstance(self.game, base.DoomWrapper):
+        #    self.rng = rng
         
         self.game.setRNG(self.rng)
         self.init()
