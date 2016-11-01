@@ -1,6 +1,6 @@
 import sys
 import pygame
-from utils import percent_round_int
+from .utils import percent_round_int
 
 from ple.games import base
 from pygame.constants import K_a, K_d
@@ -91,18 +91,18 @@ class Fruit(pygame.sprite.Sprite):
 
     def reset(self):
         x = self.rng.choice(
-            range(
+            list(range(
                 self.size *
                 2,
                 self.SCREEN_WIDTH -
                 self.size *
                 2,
-                self.size))
+                self.size)))
         y = self.rng.choice(
-            range(
+            list(range(
                 self.size,
                 self.SCREEN_HEIGHT / 2,
-                self.size))
+                self.size)))
 
         self.rect.center = (x, -1 * y)
 

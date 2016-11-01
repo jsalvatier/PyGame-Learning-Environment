@@ -2,11 +2,11 @@ import pygame
 import sys
 import math
 
-import base
+from . import base
 
 from pygame.constants import K_w, K_a, K_s, K_d
-from utils.vec2d import vec2d
-from utils import percent_round_int
+from .utils.vec2d import vec2d
+from .utils import percent_round_int
 
 
 class Food(pygame.sprite.Sprite):
@@ -42,13 +42,11 @@ class Food(pygame.sprite.Sprite):
         snake_body = [s.pos for s in snake.body]
 
         while (new_pos in snake_body):
-            _x = self.rng.choice(range(
-                self.width * 2, self.SCREEN_WIDTH - self.width * 2, self.width
-            ))
+            _x = self.rng.choice(list(range(
+                self.width * 2, self.SCREEN_WIDTH - self.width * 2, self.width)))
 
-            _y = self.rng.choice(range(
-                self.width * 2, self.SCREEN_HEIGHT - self.width * 2, self.width
-            ))
+            _y = self.rng.choice(list(range(
+                self.width * 2, self.SCREEN_HEIGHT - self.width * 2, self.width)))
 
             new_pos = vec2d((_x, _y))
 

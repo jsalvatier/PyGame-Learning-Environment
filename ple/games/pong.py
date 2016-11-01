@@ -3,10 +3,10 @@ import sys
 
 import pygame
 from pygame.constants import K_w, K_s
-from utils.vec2d import vec2d
-from utils import percent_round_int
+from .utils.vec2d import vec2d
+from .utils import percent_round_int
 
-import base
+from . import base
 
 
 class Ball(pygame.sprite.Sprite):

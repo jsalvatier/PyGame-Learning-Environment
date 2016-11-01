@@ -181,7 +181,7 @@ class RayCastPlayer():
         visible_blocks = self.map_[map_[:, 0], map_[:, 1]]
         coloring = np.ones((bottoms.shape[0], 3)) * 255.0
 
-        for k in self.block_types.keys():
+        for k in list(self.block_types.keys()):
             if self.block_types[k] is not None:
                 c = self.block_types[k]["color"]
                 sel = visible_blocks == k
@@ -328,7 +328,7 @@ if __name__ == "__main__":
         block_types
     )
 
-    print map_grid
+    print(map_grid)
 
     pygame.init()
 

@@ -2,7 +2,7 @@ import numpy as np
 from PIL import Image  # pillow
 
 import pygame
-from games import base
+from .games import base
 
 
 class PLE(object):
@@ -181,7 +181,7 @@ class PLE(object):
         actions = self.game.actions
         
         if isinstance(actions, dict):
-            actions = actions.values()
+            actions = list(actions.values())
 
         assert isinstance(actions, list), "actions is not a list"
 

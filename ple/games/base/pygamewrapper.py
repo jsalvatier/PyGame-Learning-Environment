@@ -117,7 +117,7 @@ class PyGameWrapper(object):
             A dictonary of reward events to float rewards. Only updates if key matches those specificed in the init function.
 
         """
-        for key in rewards.keys():
+        for key in list(rewards.keys()):
             if key in self.rewards:
                 self.rewards[key] = rewards[key]
 
@@ -162,7 +162,7 @@ class PyGameWrapper(object):
         list of `pygame.constants`
 
         """
-        return self.actions.values()
+        return list(self.actions.values())
 
     def init(self):
         """

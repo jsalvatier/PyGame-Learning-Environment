@@ -1,11 +1,11 @@
 import math
 import sys
 
-import base
+from . import base
 
 import pygame
 from pygame.constants import K_w, K_s
-from utils.vec2d import vec2d
+from .utils.vec2d import vec2d
 
 
 class Block(pygame.sprite.Sprite):
@@ -202,7 +202,7 @@ class Pixelcopter(base.PyGameWrapper):
         return self.screen_dim
 
     def getActions(self):
-        return self.actions.values()
+        return list(self.actions.values())
 
     def getScore(self):
         return self.score
@@ -232,7 +232,7 @@ class Pixelcopter(base.PyGameWrapper):
     def _add_terrain(self, start, end):
         w = int(self.width * 0.1)
         # each block takes up 10 units.
-        steps = range(start + (w / 2), end + (w / 2), w)
+        steps = list(range(start + (w / 2), end + (w / 2), w))
         y_jitter = []
 
         freq = 4.5 / self.width + self.rng.uniform(-0.01, 0.01)

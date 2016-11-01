@@ -25,15 +25,15 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'PyGame Learning Environment'
-copyright = u'2016, Norman Tasfi'
-author = u'Norman Tasfi'
+project = 'PyGame Learning Environment'
+copyright = '2016, Norman Tasfi'
+author = 'Norman Tasfi'
 
 import ple
 
-version = u'0.1.dev1'
+version = '0.1.dev1'
 # The full version, including alpha/beta/rc tags.
-release = u'0.1.dev1'
+release = '0.1.dev1'
 
 language = None
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -64,17 +64,17 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'PyGameLearningEnvironment.tex', u'PyGame Learning Environment Documentation',
-     u'Norman Tasfi', 'manual'),
+    (master_doc, 'PyGameLearningEnvironment.tex', 'PyGame Learning Environment Documentation',
+     'Norman Tasfi', 'manual'),
 ]
 
 man_pages = [
-    (master_doc, 'pygamelearningenvironment', u'PyGame Learning Environment Documentation',
+    (master_doc, 'pygamelearningenvironment', 'PyGame Learning Environment Documentation',
      [author], 1)
 ]
 
 texinfo_documents = [
-    (master_doc, 'PyGameLearningEnvironment', u'PyGame Learning Environment Documentation',
+    (master_doc, 'PyGameLearningEnvironment', 'PyGame Learning Environment Documentation',
      author, 'PyGameLearningEnvironment', 'RL for all.',
      'Miscellaneous'),
 ]
